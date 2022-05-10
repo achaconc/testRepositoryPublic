@@ -1,0 +1,17 @@
+{
+  "name": "@langai/frontend-technical-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn run start:react\" cd \"yarn run start:api\"",
+    "start:react": "cd ./react && yarn run start",
+    "start:api": "cd ./api && yarn run start",
+    "postinstall": "yarn run postinstall:react && yarn run postinstall:api",
+    "postinstall:react": "cd ./react && yarn",
+    "postinstall:api": "cd ./api && yarn"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "concurrently": "7.1.0"
+  }
+}
